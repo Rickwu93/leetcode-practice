@@ -24,7 +24,7 @@ var singleNumber = function(nums) {
     
     //iterate through the entire array of i
     for(let i = 0; i < nums.length; i++) {
-        counter = nums[i]
+        counter ^= nums[i]
     }
     return counter
 };
