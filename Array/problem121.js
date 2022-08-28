@@ -22,6 +22,8 @@ Constraints:
 0 <= prices[i] <= 104
 */
 
+//single loop
+
 var maxProfit = function(prices) {
     //store maximum price in variable
     let maxProfit = 0;
@@ -37,3 +39,19 @@ var maxProfit = function(prices) {
         }
         return maxProfit
 };
+
+//double loop but is slower
+function maxProfit(prices) {
+	let profit = 0;
+	for (let i = 0; i < prices.length - 1; i++) {
+		for (let j = i + 1; j < prices.length; j++) {
+			const currentProfit = prices[j] - prices[i];
+
+			if (currentProfit > profit) {
+				profit = currentProfit;
+			}
+		}
+	}
+
+	return profit;
+}
