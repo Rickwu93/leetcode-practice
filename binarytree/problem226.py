@@ -25,3 +25,8 @@ class Solution:
         self.invertTree(root.left)
         self.invertTree(root.right)
         return root
+
+def invertTree(self, root):
+    if root:
+        root.left, root.right = self.invertTree(root.right), self.invertTree(root.left)
+        return root
