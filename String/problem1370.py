@@ -27,15 +27,30 @@ Output: "art"
 Explanation: The word "rat" becomes "art" after re-ordering it with the mentioned algorithm.
 """
 
-class Solution:
-    def sortString(self, s: str) -> str:
-        s = list(s)
-        result = ''
-        while s:
-            for letter in sorted(set(s)):
-                s.remove(letter)
-                result += letter
-            for letter in sorted(set(s), reverse=True):
-                s.remove(letter)
-                result += letter
-        return result
+
+class Dog:
+    def __init__(self, eyes):
+        self.eyes = eyes
+
+
+def sortString(s: str) -> str:
+    s = list(s)
+    result = ''
+    while s:
+        for letter in sorted(set(s)):
+            s.remove(letter)
+            result += letter
+        for letter in sorted(set(s), reverse=True):
+            s.remove(letter)
+            result += letter
+    return result
+
+def replaceElements(arr: List[int]) -> List[int]:
+    print("test")
+
+
+if __name__ == "__main__":
+    print(sortString("123"))
+
+    dog = Dog("123")
+    print(dog.eyes)
