@@ -12,6 +12,8 @@ Output: false
 
 eg3. Input: arr = [-3,0,1,-3,1,1,1,-3,10,0]
 Output: true
+
+https://leetcode.com/problems/unique-number-of-occurrences/
 """
 
 class Solution:
