@@ -20,3 +20,17 @@ Explanation: The smallest multiple of both 6 and 2 is 6. Note that a number is a
  var smallestEvenMultiple = function(n) {
     return n%2 === 0 ? n:n*2;
 };
+
+
+/*
+another method
+*/
+var smallestEvenMultiple = function(n) {
+    let i = 2;
+    while (n % 2) {
+        n *= i;
+        i++;
+    }
+    
+    return n;
+};
